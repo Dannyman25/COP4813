@@ -1,37 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f2f4f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #eef1f4;
     color: #222222;
 }
 
 header {
+    padding: 35px 20px;
     background-color: #1f4e79;
-    color: white;
-    padding: 30px;
+    color: #ffffff;
     text-align: center;
 }
 
-main {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: white;
+header h1 {
+    margin: 0;
 }
 
-a {
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1rem;
+}
+
+nav {
+    background-color: #173651;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 14px 22px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #173651;
+}
+
+nav a:focus {
+    background-color: #ffffff;
+    color: #173651;
+    outline: 3px solid #ffbf47;
+    outline-offset: -3px;
+}
+
+nav a[aria-current="page"] {
+    border-bottom: 4px solid #ffbf47;
+}
+
+main {
+    width: calc(100% - 30px);
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
     color: #1f4e79;
 }
 
-a:hover {
-    color: #c0392b;
+a {
+    color: #064f86;
 }
 
-footer {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #222222;
-    color: white;
+a:hover {
+    color: #8a1f11;
+}
+
+figure {
+    margin: 30px auto;
     text-align: center;
 }
 
@@ -40,5 +99,39 @@ img {
     width: 100%;
     max-width: 450px;
     height: auto;
-    margin: 20px auto;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #444444;
+}
+
+footer {
+    margin-top: auto;
+    padding: 18px;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 20px;
+    }
 }
