@@ -13,7 +13,7 @@ body {
     color: #222222;
 }
 
-/* Campus background used only on the homepage. */
+/* Campus background on homepage. */
 body.home-page {
     position: relative;
     isolation: isolate;
@@ -166,5 +166,236 @@ footer p {
     main {
         margin: 20px auto;
         padding: 20px;
+    }
+}
+/* Assignment 3 form */
+
+.required-note {
+    margin-bottom: 25px;
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+#contact-form fieldset {
+    margin: 0 0 25px;
+    padding: 22px;
+    border: 1px solid #c5d1dc;
+    border-radius: 6px;
+    background-color: #f7f9fb;
+}
+
+#contact-form legend {
+    padding: 0 10px;
+    color: #1f4e79;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group label span {
+    color: #a12618;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 2px solid #9eabb7;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #222222;
+    font: inherit;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1f4e79;
+    outline: 3px solid #ffbf47;
+    outline-offset: 1px;
+}
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #a12618;
+    background-color: #fff5f4;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: #4b5560;
+}
+
+.form-errors {
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border-left: 5px solid #a12618;
+    border-radius: 4px;
+    background-color: #fff0ee;
+    color: #761a0f;
+    font-weight: bold;
+}
+
+.form-errors:empty {
+    display: none;
+}
+
+.form-errors p {
+    margin: 0;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 11px 20px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background-color: #173651;
+}
+
+.secondary-button {
+    border-color: #1f4e79;
+    background-color: #ffffff;
+    color: #1f4e79;
+}
+
+.secondary-button:hover {
+    background-color: #e5edf4;
+}
+
+.primary-button:focus,
+.secondary-button:focus {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+.primary-button:disabled {
+    background-color: #777777;
+    cursor: not-allowed;
+}
+
+/* Assignment 3 confirmation page */
+
+.confirmation-details {
+    margin: 25px 0;
+    overflow: hidden;
+    border: 1px solid #c5d1dc;
+    border-radius: 6px;
+}
+
+.confirmation-details dl {
+    margin: 0;
+}
+
+.confirmation-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border-bottom: 1px solid #d8e0e7;
+}
+
+.confirmation-row:last-child {
+    border-bottom: none;
+}
+
+.confirmation-row dt,
+.confirmation-row dd {
+    margin: 0;
+    padding: 14px 16px;
+}
+
+.confirmation-row dt {
+    background-color: #e5edf4;
+    color: #173651;
+    font-weight: bold;
+}
+
+.confirmation-row dd {
+    background-color: #ffffff;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.email-note {
+    margin-top: 20px;
+    padding: 12px;
+    border-left: 4px solid #1f4e79;
+    background-color: #edf4fa;
+    color: #333333;
+}
+
+/* Assignment 3 mobile layout */
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    #contact-form fieldset {
+        padding: 18px;
+    }
+
+    .confirmation-row {
+        grid-template-columns: 1fr;
+    }
+
+    .confirmation-row dt {
+        padding-bottom: 5px;
+    }
+
+    .confirmation-row dd {
+        padding-top: 5px;
+    }
+
+    .form-buttons {
+        flex-direction: column-reverse;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
     }
 }

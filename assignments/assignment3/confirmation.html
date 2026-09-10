@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Confirmation page for Daniel Crowder's COP4813 Assignment 3 form.">
+
+    <link rel="stylesheet" href="../../styles.css">
+
+    <title>Confirm Your Information | Daniel Crowder</title>
+</head>
+
+<body>
+    <header>
+        <h1>Confirm Your Information</h1>
+        <p>COP4813 Web Systems I</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About Me</a></li>
+            <li><a href="../../assignments.html">Assignments</a></li>
+            <li><a href="index.html" aria-current="page">Contact Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section aria-labelledby="confirmation-heading">
+            <h2 id="confirmation-heading">Review Your Submission</h2>
+
+            <p>
+                Please review the information below. If something is incorrect,
+                return to the form and make your changes. If everything is
+                correct, select Confirm and Email.
+            </p>
+
+            <div id="missing-information"
+                 class="form-errors"
+                 role="alert"
+                 aria-live="polite"></div>
+
+            <div id="confirmation-details"
+                 class="confirmation-details">
+
+                <dl>
+                    <div class="confirmation-row">
+                        <dt>Name</dt>
+                        <dd id="display-name"></dd>
+                    </div>
+
+                    <div class="confirmation-row">
+                        <dt>Street Address</dt>
+                        <dd id="display-address"></dd>
+                    </div>
+
+                    <div class="confirmation-row">
+                        <dt>City, State and ZIP</dt>
+                        <dd id="display-location"></dd>
+                    </div>
+
+                    <div class="confirmation-row">
+                        <dt>Phone Number</dt>
+                        <dd id="display-phone"></dd>
+                    </div>
+
+                    <div class="confirmation-row">
+                        <dt>Email Address</dt>
+                        <dd id="display-email"></dd>
+                    </div>
+
+                    <div class="confirmation-row">
+                        <dt>Birth Date</dt>
+                        <dd id="display-birthdate"></dd>
+                    </div>
+
+                    <div class="confirmation-row">
+                        <dt>Message</dt>
+                        <dd id="display-message"></dd>
+                    </div>
+                </dl>
+            </div>
+
+            <form id="email-form"
+                  action="mailto:dchoi0702@gmail.com"
+                  method="post"
+                  enctype="text/plain">
+
+                <input type="hidden"
+                       id="email-name"
+                       name="Name">
+
+                <input type="hidden"
+                       id="email-address"
+                       name="Street Address">
+
+                <input type="hidden"
+                       id="email-location"
+                       name="City, State and ZIP">
+
+                <input type="hidden"
+                       id="email-phone"
+                       name="Phone Number">
+
+                <input type="hidden"
+                       id="email-contact"
+                       name="Email Address">
+
+                <input type="hidden"
+                       id="email-birthdate"
+                       name="Birth Date">
+
+                <input type="hidden"
+                       id="email-message"
+                       name="Message">
+
+                <div class="form-buttons">
+                    <button type="button"
+                            id="edit-button"
+                            class="secondary-button">
+                        Return and Edit
+                    </button>
+
+                    <button type="submit"
+                            id="email-button"
+                            class="primary-button">
+                        Confirm and Email
+                    </button>
+                </div>
+            </form>
+
+            <p class="email-note">
+                Confirm and Email will open your device’s default email
+                application. You will need to select Send from that application
+                to finish sending the message.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Daniel Crowder</p>
+    </footer>
+
+    <script src="confirmation.js"></script>
+</body>
+
+</html>

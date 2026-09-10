@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Assignment 3 HTML5 contact form created by Daniel Crowder for COP4813 Web Systems I.">
+
+    <link rel="stylesheet" href="../../styles.css">
+
+    <title>Assignment 3 Form | Daniel Crowder</title>
+</head>
+
+<body>
+    <header>
+        <h1>Assignment 3 Form</h1>
+        <p>COP4813 Web Systems I</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About Me</a></li>
+            <li><a href="../../assignments.html">Assignments</a></li>
+            <li>
+                <a href="index.html" aria-current="page">Contact Form</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Contact Information Form</h2>
+
+            <p>
+                Complete every field below. After selecting Review Information,
+                you will have an opportunity to confirm your answers.
+            </p>
+
+            <p class="required-note">
+                Fields marked with an asterisk (*) are required.
+            </p>
+
+            <div id="form-errors"
+                 class="form-errors"
+                 role="alert"
+                 aria-live="polite"></div>
+
+            <form id="contact-form"
+                  name="contactForm"
+                  action="confirmation.html"
+                  method="get"
+                  onsubmit="return validateForm()">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">
+                                First Name <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input type="text"
+                                   id="first-name"
+                                   name="firstname"
+                                   autocomplete="given-name"
+                                   maxlength="50"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">
+                                Last Name <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input type="text"
+                                   id="last-name"
+                                   name="lastname"
+                                   autocomplete="family-name"
+                                   maxlength="50"
+                                   required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">
+                            Birth Date <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input type="date"
+                               id="birthdate"
+                               name="birthdate"
+                               autocomplete="bday"
+                               required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mailing Address</legend>
+
+                    <div class="form-group">
+                        <label for="street-address">
+                            Street Address <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="street-address"
+                               name="address"
+                               autocomplete="address-line1"
+                               placeholder="123 Main Street"
+                               maxlength="100"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">
+                            City <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="city"
+                               name="city"
+                               autocomplete="address-level2"
+                               maxlength="50"
+                               required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="state">
+                                State <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input type="text"
+                                   id="state"
+                                   name="state"
+                                   autocomplete="address-level1"
+                                   placeholder="FL"
+                                   minlength="2"
+                                   maxlength="2"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zip">
+                                ZIP Code <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input type="text"
+                                   id="zip"
+                                   name="zip"
+                                   autocomplete="postal-code"
+                                   inputmode="numeric"
+                                   placeholder="32114"
+                                   maxlength="10"
+                                   required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Details</legend>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone Number <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input type="tel"
+                               id="phone"
+                               name="phone"
+                               autocomplete="tel"
+                               inputmode="numeric"
+                               placeholder="(000)000-0000"
+                               maxlength="13"
+                               required>
+
+                        <small>Required format: (000)000-0000</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            Email Address <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               autocomplete="email"
+                               placeholder="name@example.com"
+                               maxlength="100"
+                               required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message</legend>
+
+                    <div class="form-group">
+                        <label for="message">
+                            Your Message <span aria-hidden="true">*</span>
+                        </label>
+
+                        <textarea id="message"
+                                  name="message"
+                                  rows="6"
+                                  maxlength="1000"
+                                  required></textarea>
+
+                        <small>Maximum length: 1,000 characters.</small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Human Verification</legend>
+
+                    <div class="form-group">
+                        <label for="confirm">
+                            What is 7 + 3?
+                            <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="confirm"
+                               name="confirm"
+                               inputmode="numeric"
+                               maxlength="2"
+                               required>
+
+                        <small>
+                            This question helps prevent automated form entries.
+                        </small>
+                    </div>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="reset" class="secondary-button">
+                        Clear Form
+                    </button>
+
+                    <button type="submit" class="primary-button">
+                        Review Information
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Daniel Crowder</p>
+    </footer>
+
+    <script src="form.js"></script>
+</body>
+
+</html>
