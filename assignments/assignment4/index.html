@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="A wireless signal strength calculator and interactive plot created by Daniel Crowder for COP4813 Web Systems I.">
+
+    <link rel="stylesheet" href="../../styles.css">
+
+    <title>Wireless Signal Calculator | Daniel Crowder</title>
+</head>
+
+<body>
+    <header>
+        <h1>Wireless Signal Strength Calculator</h1>
+        <p>COP4813 Web Systems I</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li>
+                <a href="../../index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="../../about.html">About Me</a>
+            </li>
+
+            <li>
+                <a href="../../assignments.html">Assignments</a>
+            </li>
+
+            <li>
+                <a href="index.html" aria-current="page">
+                    Signal Calculator
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="calculator-main">
+        <section aria-labelledby="calculator-heading">
+            <h2 id="calculator-heading">
+                Calculate Wireless Signal Strength
+            </h2>
+
+            <p>
+                This calculator uses the Friis transmission equation to
+                estimate received wireless signal power over a range of
+                distances.
+            </p>
+
+            <div class="equation-box">
+                <p>
+                    P<sub>r</sub> =
+                    P<sub>t</sub> +
+                    G<sub>t</sub> +
+                    G<sub>r</sub> -
+                    FSPL
+                </p>
+
+                <p>
+                    FSPL =
+                    20 log<sub>10</sub>(d<sub>km</sub>) +
+                    20 log<sub>10</sub>(f<sub>MHz</sub>) +
+                    32.44
+                </p>
+            </div>
+
+            <form id="calculator-form">
+                <fieldset>
+                    <legend>Wireless System Values</legend>
+
+                    <div class="calculator-input-grid">
+                        <div class="calculator-form-group">
+                            <label for="transmit-power">
+                                Transmit Power (dBm)
+                            </label>
+
+                            <input type="number"
+                                   id="transmit-power"
+                                   name="transmitPower"
+                                   value="20"
+                                   step="0.1"
+                                   required>
+                        </div>
+
+                        <div class="calculator-form-group">
+                            <label for="transmit-gain">
+                                Transmit Antenna Gain (dBi)
+                            </label>
+
+                            <input type="number"
+                                   id="transmit-gain"
+                                   name="transmitGain"
+                                   value="2"
+                                   step="0.1"
+                                   required>
+                        </div>
+
+                        <div class="calculator-form-group">
+                            <label for="receive-gain">
+                                Receive Antenna Gain (dBi)
+                            </label>
+
+                            <input type="number"
+                                   id="receive-gain"
+                                   name="receiveGain"
+                                   value="2"
+                                   step="0.1"
+                                   required>
+                        </div>
+
+                        <div class="calculator-form-group">
+                            <label for="frequency">
+                                Frequency (MHz)
+                            </label>
+
+                            <input type="number"
+                                   id="frequency"
+                                   name="frequency"
+                                   value="2400"
+                                   min="1"
+                                   step="0.1"
+                                   required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Distance Range</legend>
+
+                    <div class="calculator-input-grid">
+                        <div class="calculator-form-group">
+                            <label for="minimum-distance">
+                                Minimum Distance (meters)
+                            </label>
+
+                            <input type="number"
+                                   id="minimum-distance"
+                                   name="minimumDistance"
+                                   value="1"
+                                   min="0.01"
+                                   step="0.01"
+                                   required>
+                        </div>
+
+                        <div class="calculator-form-group">
+                            <label for="maximum-distance">
+                                Maximum Distance (meters)
+                            </label>
+
+                            <input type="number"
+                                   id="maximum-distance"
+                                   name="maximumDistance"
+                                   value="100"
+                                   min="0.01"
+                                   step="0.01"
+                                   required>
+                        </div>
+
+                        <div class="calculator-form-group">
+                            <label for="distance-step">
+                                Distance Step (meters)
+                            </label>
+
+                            <input type="number"
+                                   id="distance-step"
+                                   name="distanceStep"
+                                   value="5"
+                                   min="0.01"
+                                   step="0.01"
+                                   required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div id="calculator-error"
+                     class="calculator-error"
+                     role="alert"
+                     aria-live="polite"></div>
+
+                <button type="submit"
+                        class="primary-button calculator-button">
+                    Calculate and Plot
+                </button>
+            </form>
+        </section>
+
+        <section aria-labelledby="results-heading">
+            <h2 id="results-heading">Calculated Results</h2>
+
+            <div id="result-summary"
+                 class="calculator-summary"
+                 aria-live="polite">
+                Enter values and select Calculate and Plot.
+            </div>
+
+            <div id="signal-plot"
+                 class="signal-plot"
+                 role="region"
+                 aria-label="Plot of received signal power by distance">
+            </div>
+
+            <div class="calculator-table-container">
+                <table class="calculator-results-table">
+                    <caption>
+                        Received signal power across the selected
+                        distance range
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Distance (m)</th>
+                            <th scope="col">
+                                Received Power (dBm)
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="results-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Daniel Crowder</p>
+    </footer>
+
+    <script src="https://cdn.plot.ly/plotly-4.0.0.min.js"></script>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
