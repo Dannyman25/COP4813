@@ -559,3 +559,149 @@ footer p {
         min-height: 400px;
     }
 }
+/* Assignment 5: HTML5 Canvas Spirograph */
+
+.spirograph-main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.spirograph-main h2 {
+    margin-top: 0;
+    color: #1f4e79;
+}
+
+.spirograph-equation {
+    margin: 22px 0;
+    padding: 15px 20px;
+    border-left: 4px solid #ffb63e;
+    background-color: #f4f7fa;
+    text-align: center;
+    font-weight: bold;
+}
+
+.spirograph-equation p {
+    margin: 8px 0;
+}
+
+.spirograph-main fieldset {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #b9c8d6;
+    border-radius: 5px;
+    background-color: #f8fafc;
+}
+
+.spirograph-main legend {
+    padding: 0 8px;
+    color: #1f4e79;
+    font-weight: bold;
+}
+
+.spirograph-input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.spirograph-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.spirograph-form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.spirograph-form-group input {
+    padding: 10px;
+    border: 1px solid #8295a7;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.spirograph-form-group input:focus {
+    border-color: #1f4e79;
+    outline: 3px solid rgba(31, 78, 121, 0.22);
+}
+
+.spirograph-form-group small {
+    margin-top: 6px;
+    color: #4b5965;
+    line-height: 1.4;
+}
+
+.spirograph-button {
+    padding: 12px 20px;
+    border: 2px solid #1f4e79;
+    border-radius: 4px;
+    background-color: #1f4e79;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.spirograph-button:hover,
+.spirograph-button:focus {
+    border-color: #173651;
+    background-color: #173651;
+}
+
+.spirograph-button:disabled {
+    border-color: #6f7f8e;
+    background-color: #6f7f8e;
+    cursor: wait;
+}
+
+.spirograph-error {
+    min-height: 24px;
+    margin-top: 12px;
+    color: #a6261c;
+    font-weight: bold;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#spirograph-canvas {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #b9c8d6;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.drawing-status {
+    margin: 18px auto 0;
+    padding: 12px;
+    max-width: 600px;
+    border-left: 4px solid #1f4e79;
+    background-color: #eaf2f8;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .spirograph-main {
+        margin: 20px 12px;
+        padding: 24px 18px;
+    }
+
+    .spirograph-input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spirograph-equation {
+        overflow-wrap: anywhere;
+        font-size: 0.9rem;
+    }
+}

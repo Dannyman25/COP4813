@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="An interactive HTML5 canvas Spirograph created for COP4813 Web Systems I."
+    >
+
+    <title>Assignment 5 | Spirograph</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+
+    <script src="spirograph.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>HTML5 Canvas Spirograph</h1>
+        <p>COP4813 Web Systems I</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li>
+                <a href="../../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../../about.html">About Me</a>
+            </li>
+            <li>
+                <a href="../../assignments.html">Assignments</a>
+            </li>
+            <li>
+                <a
+                    href="index.html"
+                    aria-current="page"
+                >
+                    Spirograph
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="spirograph-main">
+        <section aria-labelledby="spirograph-heading">
+            <h2 id="spirograph-heading">
+                Create a Spirograph Pattern
+            </h2>
+
+            <p>
+                Enter values for the outer circle, inner circle,
+                and pen offset. Then select Draw Spirograph to
+                watch the pattern appear on the canvas.
+            </p>
+
+            <div class="spirograph-equation">
+                <p>
+                    x = (R + r) cos(t) −
+                    (r + O) cos(((R + r) ÷ r)t)
+                </p>
+
+                <p>
+                    y = (R + r) sin(t) −
+                    (r + O) sin(((R + r) ÷ r)t)
+                </p>
+            </div>
+
+            <form id="spirograph-form">
+                <fieldset>
+                    <legend>Spirograph Values</legend>
+
+                    <div class="spirograph-input-grid">
+                        <div class="spirograph-form-group">
+                            <label for="outer-radius">
+                                Outer Radius (R)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="outer-radius"
+                                name="outerRadius"
+                                min="40"
+                                max="180"
+                                value="120"
+                                required
+                            >
+
+                            <small>
+                                Enter a value from 40 to 180.
+                            </small>
+                        </div>
+
+                        <div class="spirograph-form-group">
+                            <label for="inner-radius">
+                                Inner Radius (r)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="inner-radius"
+                                name="innerRadius"
+                                min="10"
+                                max="150"
+                                value="45"
+                                required
+                            >
+
+                            <small>
+                                Enter a value from 10 to 150.
+                                This value cannot be greater than R.
+                            </small>
+                        </div>
+
+                        <div class="spirograph-form-group">
+                            <label for="pen-offset">
+                                Pen Offset (O)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="pen-offset"
+                                name="penOffset"
+                                min="0"
+                                max="150"
+                                value="55"
+                                required
+                            >
+
+                            <small>
+                                Enter a value from 0 to 150.
+                            </small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button
+                    type="submit"
+                    class="spirograph-button"
+                >
+                    Draw Spirograph
+                </button>
+
+                <div
+                    id="spirograph-error"
+                    class="spirograph-error"
+                    role="alert"
+                    aria-live="assertive"
+                ></div>
+            </form>
+
+            <div class="canvas-container">
+                <canvas
+                    id="spirograph-canvas"
+                    width="600"
+                    height="600"
+                    aria-label="Canvas where the animated Spirograph pattern is drawn"
+                >
+                    Your browser does not support the HTML5 canvas
+                    element.
+                </canvas>
+            </div>
+
+            <p
+                id="drawing-status"
+                class="drawing-status"
+                aria-live="polite"
+            >
+                The canvas is blank. Select Draw Spirograph to begin.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Daniel Crowder</p>
+    </footer>
+</body>
+</html>
