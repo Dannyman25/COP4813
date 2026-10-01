@@ -705,3 +705,77 @@ footer p {
         font-size: 0.9rem;
     }
 }
+    /* Assignment 6: JSON Video Game Collection */
+
+.json-main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.json-main h2 {
+    margin-top: 0;
+    color: #1f4e79;
+}
+
+.json-table-container {
+    margin-top: 25px;
+    overflow-x: auto;
+    border: 1px solid #b7c9db;
+    border-radius: 4px;
+}
+
+.json-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.json-table caption {
+    padding: 14px;
+    color: #173651;
+    font-weight: bold;
+    background-color: #f4f7fa;
+}
+
+.json-table th,
+.json-table td {
+    padding: 12px;
+    border-bottom: 1px solid #cbd7e2;
+    text-align: left;
+}
+
+.json-table th {
+    color: #ffffff;
+    background-color: #1f4e79;
+}
+
+.json-table tbody tr:nth-child(even) {
+    background-color: #edf3f8;
+}
+
+.json-table tbody tr:hover {
+    background-color: #dce9f4;
+}
+
+#json-status {
+    margin-top: 20px;
+    padding: 12px;
+    color: #173651;
+    background-color: #edf3f8;
+    border-left: 4px solid #1f4e79;
+}
+
+@media (max-width: 600px) {
+    .json-main {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .json-table th,
+    .json-table td {
+        padding: 9px;
+    }
+}

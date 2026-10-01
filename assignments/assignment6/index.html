@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Collection | COP4813</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="json.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Video Game Collection</h1>
+        <p>COP4813 Web Systems I</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About Me</a></li>
+            <li><a href="../../assignments.html">Assignments</a></li>
+            <li>
+                <a href="index.html" aria-current="page">
+                    JSON Data
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="json-main">
+        <section>
+            <h2 id="collection-title">Video Game Collection</h2>
+
+            <p id="collection-description">
+                Loading video game data...
+            </p>
+
+            <div class="json-table-container">
+                <table class="json-table">
+                    <caption>
+                        Video game information loaded from an external JSON file
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Genre</th>
+                            <th scope="col">Platform</th>
+                            <th scope="col">Release Year</th>
+                            <th scope="col">Rating</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="game-table-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="json-status" role="status" aria-live="polite">
+                Loading data...
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Daniel Crowder</p>
+    </footer>
+</body>
+</html>

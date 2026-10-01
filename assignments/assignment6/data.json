@@ -1,0 +1,41 @@
+{
+  "title": "Video Game Collection",
+  "description": "A collection of video games organized by title, genre, platform, release year, and personal rating.",
+  "games": [
+    {
+      "title": "Outer Wilds",
+      "genre": "Adventure",
+      "platform": "PC",
+      "releaseYear": 2019,
+      "rating": 10
+    },
+    {
+      "title": "Destiny 2",
+      "genre": "Action",
+      "platform": "PC",
+      "releaseYear": 2017,
+      "rating": 8
+    },
+    {
+      "title": "Forza Horizon 5",
+      "genre": "Racing",
+      "platform": "PC",
+      "releaseYear": 2021,
+      "rating": 9
+    },
+    {
+      "title": "Minecraft",
+      "genre": "Sandbox",
+      "platform": "PC",
+      "releaseYear": 2011,
+      "rating": 9
+    },
+    {
+      "title": "Baldur's Gate 3",
+      "genre": "Role-Playing",
+      "platform": "PC",
+      "releaseYear": 2023,
+      "rating": 9
+    }
+  ]
+}
