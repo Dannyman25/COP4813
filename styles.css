@@ -779,3 +779,119 @@ footer p {
         padding: 9px;
     }
 }
+
+/* Assignment 7: Drag and Drop Card Game */
+
+.dragdrop-main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.dragdrop-main h2,
+.dragdrop-main h3 {
+    color: #1f4e79;
+}
+
+#deal-button {
+    margin: 15px 0 25px;
+    padding: 12px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #1f4e79;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#deal-button:hover,
+#deal-button:focus {
+    background-color: #173651;
+}
+
+.card-game {
+    display: grid;
+    grid-template-columns: 1fr 230px;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.hand-section,
+.discard-pile {
+    padding: 20px;
+    border: 2px solid #b7c9db;
+    border-radius: 5px;
+    background-color: #f4f7fa;
+}
+
+.card-hand {
+    display: flex;
+    min-height: 280px;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.playing-card {
+    width: 128px;
+    height: auto;
+    display: block;
+    cursor: grab;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.playing-card:hover {
+    transform: translateY(-8px);
+}
+
+.playing-card:active {
+    cursor: grabbing;
+}
+
+.playing-card.dragging {
+    opacity: 0.45;
+}
+
+.discard-pile {
+    min-height: 280px;
+    text-align: center;
+    border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.discard-pile.drag-over {
+    background-color: #fff3cd;
+    border-color: #f5a623;
+}
+
+#drop-status {
+    margin-top: 20px;
+    padding: 12px;
+    color: #173651;
+    background-color: #edf3f8;
+    border-left: 4px solid #1f4e79;
+}
+
+@media (max-width: 800px) {
+    .card-game {
+        grid-template-columns: 1fr;
+    }
+
+    .discard-pile {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dragdrop-main {
+        margin: 15px;
+        padding: 20px;
+    }
+}

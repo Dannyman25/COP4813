@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7 - Drag and Drop</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="dragdrop.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Drag and Drop Card Game</h1>
+        <p>COP4813 Web Systems I</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+    <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../about.html">About Me</a></li>
+        <li><a href="../../assignments.html">Assignments</a></li>
+        <li>
+            <a href="index.html" aria-current="page">
+                Drag and Drop
+            </a>
+        </li>
+    </ul>
+</nav>
+
+    <main class="dragdrop-main">
+        <section>
+            <h2>Deal and Discard Cards</h2>
+
+            <p>
+                Select Deal Cards to receive five random cards. Drag each
+                card into the discard pile to remove it from your hand.
+            </p>
+
+            <button type="button" id="deal-button">Deal Cards</button>
+
+            <div class="card-game">
+                <section class="hand-section" aria-labelledby="hand-heading">
+                    <h3 id="hand-heading">Your Hand</h3>
+
+                    <div id="hand" class="card-hand">
+                        <p id="hand-message">
+                            Select Deal Cards to begin.
+                        </p>
+                    </div>
+                </section>
+
+                <section
+                    id="discard-pile"
+                    class="discard-pile"
+                    aria-labelledby="discard-heading"
+                >
+                    <h3 id="discard-heading">Discard Pile</h3>
+                    <p>Drag cards here</p>
+                </section>
+            </div>
+
+            <p id="drop-status" aria-live="polite">
+                No cards have been discarded.
+            </p>
+
+            <p>
+                Cards discarded:
+                <strong id="discard-count">0</strong>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
