@@ -895,3 +895,80 @@ footer p {
         padding: 20px;
     }
 }
+
+/* Assignment 9: Canvas Animation */
+
+.animation-main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.animation-main h2 {
+    margin-top: 0;
+    color: #1f4e79;
+}
+
+.animation-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.animation-controls button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #1f4e79;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.animation-controls button:hover:not(:disabled) {
+    background-color: #173651;
+}
+
+.animation-controls button:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+.animation-controls button:disabled {
+    color: #ffffff;
+    background-color: #596773;
+    cursor: default;
+}
+
+.animation-canvas-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #1f4e79;
+    background-color: #f4f7fa;
+}
+
+#animation-canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: crosshair;
+}
+
+#animation-status {
+    margin-top: 20px;
+    padding: 14px;
+    color: #173651;
+    background-color: #edf3f8;
+    border-left: 4px solid #1f4e79;
+}
+
+@media (max-width: 600px) {
+    .animation-main {
+        margin: 15px;
+        padding: 20px;
+    }
+}

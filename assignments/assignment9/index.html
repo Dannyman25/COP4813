@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9 - Animation</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="animation.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Canvas Animation</h1>
+        <p>COP4813 Web Systems I</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About Me</a></li>
+            <li><a href="../../assignments.html">Assignments</a></li>
+            <li><a href="index.html" aria-current="page">Animation</a></li>
+        </ul>
+    </nav>
+
+    <main class="animation-main">
+        <h2>Interactive Bouncing Ball</h2>
+        <p>
+            Select Start to animate the ball. Click directly on the ball
+            to change its color and reverse its direction.
+            Use Pause to stop temporarily or Reset to start over.
+        </p>
+
+        <div class="animation-controls">
+            <button type="button" id="start-button">Start</button>
+            <button type="button" id="pause-button" disabled>Pause</button>
+            <button type="button" id="reset-button">Reset</button>
+        </div>
+
+        <div class="animation-canvas-container">
+            <canvas id="animation-canvas" width="800" height="450"
+                    aria-label="A ball that bounces inside a rectangular area"
+                    aria-describedby="animation-status">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+        </div>
+
+        <p id="animation-status" role="status">
+            Ready. Select Start to begin.
+        </p>
+
+        <p>Successful ball clicks: <span id="click-count">0</span></p>
+    </main>
+</body>
+</html>
