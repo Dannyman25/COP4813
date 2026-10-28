@@ -972,3 +972,91 @@ footer p {
         padding: 20px;
     }
 }
+
+/* Assignment 10: Mobile Website and Lighthouse Audit */
+
+.lighthouse-main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.lighthouse-main h2,
+.lighthouse-main h3 {
+    color: #1f4e79;
+}
+
+.lighthouse-main section {
+    margin-top: 30px;
+}
+
+.lighthouse-scores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    padding: 15px;
+    text-align: center;
+    background-color: #edf7f1;
+    border: 2px solid #00a86b;
+    border-radius: 8px;
+}
+
+.score-card strong {
+    color: #008f5a;
+    font-size: 2.2rem;
+}
+
+.score-card span {
+    margin-top: 8px;
+    color: #173651;
+    font-weight: bold;
+}
+
+.audit-figure {
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+.audit-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #b7c9db;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.audit-figure figcaption {
+    margin-top: 10px;
+    color: #555555;
+    font-style: italic;
+}
+
+@media (max-width: 700px) {
+    .lighthouse-main {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .lighthouse-scores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .lighthouse-scores {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile website and Lighthouse audit results for Daniel Crowder's Web Systems portfolio.">
+    <title>Assignment 10 - Mobile and Lighthouse Audit</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Daniel Crowder</h1>
+        <p>Information Technology Student and Support Technician</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About Me</a></li>
+            <li><a class="active" aria-current="page" href="../../assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
+
+    <main class="lighthouse-main">
+        <h2>Assignment 10: Mobile Website and Lighthouse Audit</h2>
+
+        <p>
+            I designed my home page to work on both desktop and mobile devices.
+            The page keeps the same navigation choices and content while adjusting
+            its layout to fit smaller screens.
+        </p>
+
+        <section>
+            <h3>Lighthouse Mobile Audit Results</h3>
+
+            <div class="lighthouse-scores">
+                <div class="score-card">
+                    <strong>97</strong>
+                    <span>Performance</span>
+                </div>
+
+                <div class="score-card">
+                    <strong>100</strong>
+                    <span>Accessibility</span>
+                </div>
+
+                <div class="score-card">
+                    <strong>100</strong>
+                    <span>Best Practices</span>
+                </div>
+
+                <div class="score-card">
+                    <strong>100</strong>
+                    <span>SEO</span>
+                </div>
+            </div>
+
+            <figure class="audit-figure">
+                <img
+                    src="images/lighthouse-overview.png"
+                    alt="Google Lighthouse mobile audit showing 97 for Performance and 100 for Accessibility, Best Practices, and SEO">
+                <figcaption>
+                    Google Lighthouse mobile audit of my portfolio home page.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Analysis</h3>
+
+            <p>
+                The Lighthouse audit gave the website a score of 97 for Performance
+                and scores of 100 for Accessibility, Best Practices, and SEO. The
+                report stated that Chrome extensions may have affected the Performance
+                result.
+            </p>
+
+            <p>
+                The mobile version keeps the same Home, About Me, and Assignments
+                navigation choices as the desktop version. The page content and images
+                resize to fit smaller screens, and the navigation links can be activated
+                by either a mouse click or a touch.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Daniel Crowder</p>
+    </footer>
+</body>
+</html>
