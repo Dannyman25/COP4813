@@ -1060,3 +1060,356 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+ /* Assignment 11 - BSIT Course Advisor */
+
+.advisor-page {
+    width: min(1200px, 92%);
+    margin: 30px auto;
+}
+
+.advisor-introduction,
+.advisor-section {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+    margin-bottom: 25px;
+    padding: 25px;
+}
+
+.advisor-introduction h2,
+.advisor-section h2 {
+    color: #174d78;
+    margin-top: 0;
+}
+
+.advisor-instructions {
+    background-color: #edf6fc;
+    border-left: 5px solid #245b87;
+    margin-top: 20px;
+    padding: 15px 20px;
+}
+
+.advisor-instructions h3 {
+    color: #174d78;
+    margin-top: 0;
+}
+
+.advisor-instructions li {
+    margin-bottom: 7px;
+}
+
+.advisor-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    align-items: center;
+    background-color: #174d78;
+    border-bottom: 5px solid #f5b82e;
+    border-radius: 6px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 110px;
+    padding: 15px;
+    text-align: center;
+}
+
+.summary-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.advisor-message {
+    background-color: #fff8dc;
+    border: 1px solid #e0b94f;
+    border-radius: 5px;
+    color: #533e00;
+    margin-bottom: 20px;
+    padding: 13px 17px;
+}
+
+.section-heading {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-heading p {
+    margin-bottom: 0;
+}
+
+.course-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.course-card {
+    background-color: #f8fafc;
+    border: 2px solid #c9d5df;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+}
+
+.course-card h3 {
+    color: #174d78;
+    font-size: 1.05rem;
+    margin: 0 0 12px;
+}
+
+.course-card p {
+    line-height: 1.5;
+}
+
+.course-status {
+    color: #555555;
+    font-weight: bold;
+}
+
+.completed-course {
+    background-color: #e9f8ef;
+    border-color: #159455;
+}
+
+.completed-course .course-status {
+    color: #08743d;
+}
+
+.blocked-course {
+    background-color: #f1f1f1;
+    border-color: #999999;
+    opacity: 0.78;
+}
+
+.blocked-course .course-status {
+    color: #666666;
+}
+
+.available-course {
+    border-color: #168a5b;
+}
+
+.completion-label {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ccd5dc;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    margin: 5px 0 15px;
+    min-height: 44px;
+    padding: 8px 10px;
+}
+
+.completion-label input {
+    height: 18px;
+    margin-right: 8px;
+    width: 18px;
+}
+
+.completion-label:has(input:disabled) {
+    cursor: not-allowed;
+}
+
+.primary-button,
+.secondary-button,
+.details-button,
+.remove-button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    min-height: 42px;
+    padding: 10px 15px;
+}
+
+.primary-button {
+    background-color: #087a4b;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+    background-color: #05633c;
+}
+
+.secondary-button {
+    background-color: #174d78;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+    background-color: #103a5d;
+}
+
+.details-button {
+    background-color: #dce8f1;
+    color: #123f63;
+    margin-top: auto;
+}
+
+.details-button:hover,
+.details-button:focus {
+    background-color: #c4d8e7;
+}
+
+.remove-button {
+    background-color: #a62828;
+    color: #ffffff;
+}
+
+.remove-button:hover,
+.remove-button:focus {
+    background-color: #841d1d;
+}
+
+.course-details {
+    background-color: #ffffff;
+    border-left: 4px solid #f5b82e;
+    margin-top: 12px;
+    padding: 10px 14px;
+}
+
+.course-details p {
+    margin: 7px 0;
+}
+
+.choice-groups {
+    border-bottom: 2px solid #d8e0e6;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+.choice-groups > h3 {
+    color: #174d78;
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.choice-group-card {
+    background-color: #fff8dc;
+    border: 1px solid #e2c568;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.choice-group-card h4 {
+    color: #584100;
+    margin: 0 0 8px;
+}
+
+.choice-group-card p {
+    margin: 7px 0;
+}
+
+.choice-course-codes {
+    font-weight: bold;
+}
+
+.course-plan {
+    display: grid;
+    gap: 12px;
+}
+
+.plan-item {
+    align-items: center;
+    background-color: #edf6fc;
+    border-left: 5px solid #174d78;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 14px 18px;
+}
+
+.plan-item h3 {
+    color: #174d78;
+    font-size: 1rem;
+    margin: 0 0 5px;
+}
+
+.plan-item p {
+    margin: 0;
+}
+
+.empty-message {
+    background-color: #f4f4f4;
+    border: 1px dashed #888888;
+    grid-column: 1 / -1;
+    padding: 18px;
+    text-align: center;
+}
+
+.data-explanation li {
+    margin-bottom: 8px;
+}
+
+.error-message {
+    background-color: #ffe8e8;
+    border: 1px solid #b52a2a;
+    color: #7a1010;
+    padding: 15px;
+}
+
+/* Assignment 11 mobile layout */
+
+@media (max-width: 700px) {
+    .advisor-page {
+        margin: 18px auto;
+        width: 94%;
+    }
+
+    .advisor-introduction,
+    .advisor-section {
+        padding: 18px;
+    }
+
+    .advisor-summary {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .summary-card {
+        min-height: 80px;
+    }
+
+    .section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .secondary-button {
+        width: 100%;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-item {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .remove-button {
+        width: 100%;
+    }
+}

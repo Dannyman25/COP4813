@@ -1,0 +1,376 @@
+{
+  "program": {
+    "name": "Bachelor of Science in Information Technology",
+    "school": "Daytona State College",
+    "catalogYear": "2026-2027",
+    "description": "Select completed courses to discover which BSIT courses are available next."
+  },
+
+  "choiceGroups": [
+    {
+      "id": "programming",
+      "name": "Programming Requirement",
+      "courses": ["COP2800", "COP2220", "COP2360"],
+      "required": 1,
+      "exclusive": true,
+      "note": "Complete one programming course. The other choices are not required after one is completed."
+    },
+    {
+      "id": "discrete",
+      "name": "Discrete Mathematics Requirement",
+      "courses": ["COT3100", "MAD2104"],
+      "required": 1,
+      "exclusive": true,
+      "note": "Complete either COT3100 or MAD2104."
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics Requirement",
+      "courses": ["STA2023", "EGN3443"],
+      "required": 1,
+      "exclusive": true,
+      "note": "Complete either STA2023 or EGN3443."
+    },
+    {
+      "id": "digital",
+      "name": "Digital Systems Requirement",
+      "courses": ["CET1112C", "CET3116"],
+      "required": 1,
+      "exclusive": true,
+      "note": "Complete either CET1112C or CET3116."
+    },
+    {
+      "id": "specialization",
+      "name": "Upper-Level Elective",
+      "courses": ["COP4834", "COP4709", "CET4860", "CET4861", "CET4862", "CET4884"],
+      "required": 1,
+      "exclusive": true,
+      "note": "Select one approved three-credit upper-level elective."
+    }
+  ],
+
+  "courses": [
+    {
+      "code": "COP2800",
+      "title": "Computer Programming Using Java",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": null,
+      "choiceGroup": "programming",
+      "note": "One of the programming choices for the BSIT program."
+    },
+    {
+      "code": "COP2220",
+      "title": "C Programming",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": null,
+      "choiceGroup": "programming",
+      "note": "One of the programming choices for the BSIT program."
+    },
+    {
+      "code": "COP2360",
+      "title": "C# Programming",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": null,
+      "choiceGroup": "programming",
+      "note": "One of the programming choices for the BSIT program."
+    },
+    {
+      "code": "COT3100",
+      "title": "Discrete Structures",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": null,
+      "choiceGroup": "discrete",
+      "note": "One of the two discrete mathematics choices."
+    },
+    {
+      "code": "MAD2104",
+      "title": "Discrete Mathematics",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": null,
+      "choiceGroup": "discrete",
+      "note": "One of the two discrete mathematics choices."
+    },
+    {
+      "code": "STA2023",
+      "title": "Elementary Statistics",
+      "credits": 3,
+      "offered": ["Fall", "Spring", "Summer"],
+      "prerequisites": null,
+      "choiceGroup": "statistics",
+      "note": "One of the two statistics choices."
+    },
+    {
+      "code": "EGN3443",
+      "title": "Probability and Statistics for Engineers",
+      "credits": 3,
+      "offered": ["Fall"],
+      "prerequisites": null,
+      "choiceGroup": "statistics",
+      "note": "One of the two statistics choices."
+    },
+    {
+      "code": "CET1112C",
+      "title": "Digital Fundamentals",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": null,
+      "choiceGroup": "digital",
+      "note": "One of the two digital systems choices."
+    },
+    {
+      "code": "CET3116",
+      "title": "Digital Technology",
+      "credits": 3,
+      "offered": ["Spring"],
+      "prerequisites": null,
+      "choiceGroup": "digital",
+      "note": "One of the two digital systems choices."
+    },
+    {
+      "code": "EET1021C",
+      "title": "Introduction to Electrical Circuits",
+      "credits": 3,
+      "offered": ["Fall", "Spring", "Summer"],
+      "prerequisites": null,
+      "note": "May be used to satisfy the electrical requirement and is a prerequisite option for CNT3104."
+    },
+    {
+      "code": "EET3086",
+      "title": "Electrical Systems",
+      "credits": 3,
+      "offered": ["Fall"],
+      "prerequisites": null,
+      "note": "May satisfy the electrical requirement and is a prerequisite option for CNT3104."
+    },
+    {
+      "code": "CET1600",
+      "title": "Network Fundamentals",
+      "credits": 3,
+      "offered": ["Fall", "Spring", "Summer"],
+      "prerequisites": null,
+      "note": "Provides introductory networking knowledge."
+    },
+    {
+      "code": "CTS3348",
+      "title": "Linux Administration",
+      "credits": 3,
+      "offered": ["Fall", "Spring", "Summer"],
+      "prerequisites": null,
+      "note": "Required before Operating Systems and is one requirement for Applied Cybersecurity."
+    },
+    {
+      "code": "COP3530",
+      "title": "Data Structures",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": {
+        "all": [
+          {
+            "any": ["COP2800", "COP2220", "COP2360"]
+          },
+          {
+            "any": ["COT3100", "MAD2104"]
+          }
+        ]
+      },
+      "note": "Requires one programming course AND one discrete mathematics course."
+    },
+    {
+      "code": "CEN3722",
+      "title": "Human Computer Interfaces",
+      "credits": 3,
+      "offered": ["Fall"],
+      "prerequisites": {
+        "any": ["COP2800", "COP2220", "COP2360"]
+      },
+      "note": "Requires one of the approved programming courses."
+    },
+    {
+      "code": "COP4708",
+      "title": "Applied Database I",
+      "credits": 3,
+      "offered": ["Spring"],
+      "prerequisites": {
+        "any": ["COP2800", "COP2220", "COP2360"]
+      },
+      "note": "Requires one of the approved programming courses."
+    },
+    {
+      "code": "COP4610",
+      "title": "Operating Systems",
+      "credits": 3,
+      "offered": ["Fall"],
+      "prerequisites": {
+        "all": ["CTS3348"]
+      },
+      "note": "Requires CTS3348 Linux Administration."
+    },
+    {
+      "code": "CNT3104",
+      "title": "Introduction to Telecommunications",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": {
+        "any": ["EET1021C", "EET3086"]
+      },
+      "note": "Requires either EET1021C or EET3086."
+    },
+    {
+      "code": "CIS4360",
+      "title": "Applied Cybersecurity",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": {
+        "all": [
+          "CTS3348",
+          {
+            "any": ["CET1600", "CNT3104"]
+          }
+        ]
+      },
+      "note": "Requires CTS3348 AND either CET1600 or CNT3104."
+    },
+    {
+      "code": "CNT4007",
+      "title": "Data and Computer Communications",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": {
+        "all": [
+          "CNT3104",
+          {
+            "any": ["STA2023", "EGN3443"]
+          }
+        ]
+      },
+      "note": "Requires CNT3104 AND one approved statistics course."
+    },
+    {
+      "code": "CNT4703",
+      "title": "Voice and Data Network Design",
+      "credits": 3,
+      "offered": ["Summer", "Fall"],
+      "prerequisites": {
+        "all": ["CNT4007"]
+      },
+      "note": "Requires CNT4007 Data and Computer Communications."
+    },
+    {
+      "code": "CDA4101",
+      "title": "Computer Organization and Design",
+      "credits": 3,
+      "offered": ["Spring"],
+      "prerequisites": {
+        "any": ["CET1112C", "CET3116"]
+      },
+      "note": "Requires one approved digital systems course."
+    },
+    {
+      "code": "CEN4010",
+      "title": "Software Engineering",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": {
+        "all": ["COP3530"]
+      },
+      "note": "Requires COP3530 Data Structures."
+    },
+    {
+      "code": "COP4813",
+      "title": "Web Systems I",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": {
+        "all": ["COP3530"]
+      },
+      "note": "Requires COP3530 Data Structures."
+    },
+    {
+      "code": "CEN4801",
+      "title": "Systems Integration",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": {
+        "all": ["COP4708", "COP3530"]
+      },
+      "note": "Requires both COP4708 and COP3530."
+    },
+    {
+      "code": "CIS4510",
+      "title": "IT Project Management",
+      "credits": 3,
+      "offered": ["Spring"],
+      "prerequisites": {
+        "all": ["CEN4801"]
+      },
+      "note": "Capstone course that requires CEN4801 Systems Integration."
+    },
+    {
+      "code": "COP4834",
+      "title": "Web Systems II",
+      "credits": 3,
+      "offered": ["Spring"],
+      "prerequisites": {
+        "all": ["COP4813"]
+      },
+      "choiceGroup": "specialization",
+      "note": "Upper-level elective continuing the Web Systems sequence."
+    },
+    {
+      "code": "COP4709",
+      "title": "Applied Database II",
+      "credits": 3,
+      "offered": ["Fall"],
+      "prerequisites": {
+        "all": ["COP4708"]
+      },
+      "choiceGroup": "specialization",
+      "note": "Upper-level elective continuing the Applied Database sequence."
+    },
+    {
+      "code": "CET4860",
+      "title": "Introduction to Digital Forensics",
+      "credits": 3,
+      "offered": ["Fall", "Spring"],
+      "prerequisites": null,
+      "choiceGroup": "specialization",
+      "note": "Approved upper-level cybersecurity elective."
+    },
+    {
+      "code": "CET4861",
+      "title": "Advanced Digital Forensics",
+      "credits": 3,
+      "offered": ["Spring"],
+      "prerequisites": {
+        "all": ["CET4860"]
+      },
+      "choiceGroup": "specialization",
+      "note": "Requires CET4860 Introduction to Digital Forensics."
+    },
+    {
+      "code": "CET4862",
+      "title": "Network Forensics and Incident Response",
+      "credits": 3,
+      "offered": ["Spring"],
+      "prerequisites": {
+        "all": ["CIS4360"]
+      },
+      "choiceGroup": "specialization",
+      "note": "Requires CIS4360 Applied Cybersecurity."
+    },
+    {
+      "code": "CET4884",
+      "title": "Security Methods and Practice",
+      "credits": 3,
+      "offered": ["Fall"],
+      "prerequisites": null,
+      "choiceGroup": "specialization",
+      "note": "Approved upper-level cybersecurity elective."
+    }
+  ]
+}

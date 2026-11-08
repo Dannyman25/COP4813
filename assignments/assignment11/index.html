@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A dynamic BSIT course advising tool for Daytona State College.">
+    <title>Assignment 11 - BSIT Course Advisor</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="advisor.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Daniel Crowder</h1>
+        <p>Information Technology Student and Support Technician</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About Me</a></li>
+            <li>
+                <a href="../../assignments.html" class="active" aria-current="page">
+                    Assignments
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="advisor-page">
+        <section class="advisor-introduction">
+            <h2>Assignment 11: BSIT Course Advisor</h2>
+
+            <p>
+                This advising tool uses the 2026–2027 Daytona State College
+                Bachelor of Science in Information Technology degree requirements.
+            </p>
+
+            <p>
+                Select the courses you have completed. The advisor will determine
+                which courses you can take based on their prerequisites.
+            </p>
+
+            <div class="advisor-instructions">
+                <h3>How to Use the Advisor</h3>
+
+                <ol>
+                    <li>Select each course you have completed.</li>
+                    <li>Review the courses that become available.</li>
+                    <li>Add available courses to your course plan.</li>
+                    <li>Select a course's details button to view additional information.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="advisor-summary" aria-label="Advisor summary">
+            <div class="summary-card">
+                <span id="completed-count" class="summary-number">0</span>
+                <span>Completed</span>
+            </div>
+
+            <div class="summary-card">
+                <span id="available-count" class="summary-number">0</span>
+                <span>Available</span>
+            </div>
+
+            <div class="summary-card">
+                <span id="planned-count" class="summary-number">0</span>
+                <span>Planned</span>
+            </div>
+        </section>
+
+        <div id="advisor-message" class="advisor-message" aria-live="polite">
+            Select your completed courses to begin.
+        </div>
+
+        <section class="advisor-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Course Requirements</h2>
+                    <p>Select the courses you have already completed.</p>
+                </div>
+
+                <button id="reset-button" class="secondary-button" type="button">
+                    Reset Selections
+                </button>
+            </div>
+
+            <div id="choice-groups" class="choice-groups"></div>
+            <div id="course-list" class="course-grid"></div>
+        </section>
+
+        <section class="advisor-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Courses You Can Take</h2>
+                    <p>
+                        These courses are available based on the prerequisites
+                        you selected above.
+                    </p>
+                </div>
+            </div>
+
+            <div id="available-courses" class="course-grid"></div>
+        </section>
+
+        <section class="advisor-section">
+            <div class="section-heading">
+                <div>
+                    <h2>My Course Plan</h2>
+                    <p>Add eligible courses to create a possible future schedule.</p>
+                </div>
+            </div>
+
+            <div id="course-plan" class="course-plan">
+                <p class="empty-message">No courses have been added to your plan.</p>
+            </div>
+        </section>
+
+        <section class="advisor-section data-explanation">
+            <h2>Assignment Requirements Demonstrated</h2>
+
+            <ul>
+                <li>Course information and prerequisites are stored in JSON.</li>
+                <li>JavaScript dynamically creates the course interface.</li>
+                <li>Dynamically created controls respond to user events.</li>
+                <li>The advisor evaluates both AND and OR prerequisites.</li>
+                <li>Course notes and mutually exclusive choices are supported.</li>
+            </ul>
+        </section>
+
+        <noscript>
+            <p class="error-message">
+                JavaScript must be enabled to use the BSIT Course Advisor.
+            </p>
+        </noscript>
+    </main>
+
+    <footer>
+        <p>Created by Daniel Crowder</p>
+    </footer>
+</body>
+</html>
