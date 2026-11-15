@@ -1,0 +1,204 @@
+{
+  "title": "Content Management System Comparison",
+  "description": "A comparison of five content management systems, their technology, capabilities, limitations, and example websites.",
+  "systems": [
+    {
+      "name": "WordPress",
+      "support": "Open-source software supported by the WordPress community and many web-hosting companies.",
+      "technology": [
+        "PHP",
+        "MySQL or MariaDB",
+        "HTML, CSS, and JavaScript"
+      ],
+      "capabilities": [
+        "Large selection of themes",
+        "Large plugin directory",
+        "Block-based page editor",
+        "User and media management",
+        "REST API support"
+      ],
+      "limitations": [
+        "Plugins and themes require regular updates",
+        "Third-party plugins may introduce security or compatibility problems",
+        "Large numbers of plugins can reduce performance"
+      ],
+      "example": {
+        "name": "WordPress.org",
+        "url": "https://wordpress.org/"
+      },
+      "sources": [
+        {
+          "name": "WordPress Requirements",
+          "url": "https://wordpress.org/about/requirements/"
+        },
+        {
+          "name": "WordPress Developer Resources",
+          "url": "https://developer.wordpress.org/"
+        },
+        {
+          "name": "WordPress Plugin Directory",
+          "url": "https://wordpress.org/plugins/"
+        }
+      ]
+    },
+    {
+      "name": "Drupal",
+      "support": "Open-source software supported by the Drupal Association and its developer community.",
+      "technology": [
+        "PHP",
+        "MySQL, MariaDB, PostgreSQL, or SQLite",
+        "Twig templates",
+        "HTML, CSS, and JavaScript"
+      ],
+      "capabilities": [
+        "Modular content-management system",
+        "Custom content types and fields",
+        "Themes and contributed modules",
+        "Multilingual support",
+        "Detailed roles and permissions"
+      ],
+      "limitations": [
+        "Steeper learning curve than many basic CMS platforms",
+        "Advanced customization often requires development experience",
+        "Major version upgrades may require additional planning"
+      ],
+      "example": {
+        "name": "Drupal.org",
+        "url": "https://www.drupal.org/"
+      },
+      "sources": [
+        {
+          "name": "About Drupal",
+          "url": "https://www.drupal.org/about"
+        },
+        {
+          "name": "Understanding Drupal",
+          "url": "https://www.drupal.org/docs/user_guide/en/understanding-drupal.html"
+        },
+        {
+          "name": "Drupal System Requirements",
+          "url": "https://www.drupal.org/docs/getting-started/system-requirements"
+        }
+      ]
+    },
+    {
+      "name": "Joomla",
+      "support": "Open-source software supported by Open Source Matters and the Joomla volunteer community.",
+      "technology": [
+        "PHP",
+        "MySQL, MariaDB, or PostgreSQL",
+        "HTML, CSS, and JavaScript"
+      ],
+      "capabilities": [
+        "Templates for changing site appearance",
+        "Components, modules, and plugins",
+        "Built-in multilingual features",
+        "User access levels and permissions",
+        "Menu and content management"
+      ],
+      "limitations": [
+        "Smaller extension marketplace than WordPress",
+        "Some extensions and templates require payment",
+        "Third-party extension compatibility must be checked during upgrades"
+      ],
+      "example": {
+        "name": "Joomla.org",
+        "url": "https://www.joomla.org/"
+      },
+      "sources": [
+        {
+          "name": "Joomla Technical Requirements",
+          "url": "https://manual.joomla.org/docs/next/get-started/technical-requirements/"
+        },
+        {
+          "name": "Joomla Extension Types",
+          "url": "https://docs.joomla.org/Extension_types_(technical_definitions)"
+        },
+        {
+          "name": "Joomla Documentation",
+          "url": "https://docs.joomla.org/"
+        }
+      ]
+    },
+    {
+      "name": "Ghost",
+      "support": "Open-source software maintained by the nonprofit Ghost Foundation, with optional paid Ghost(Pro) hosting.",
+      "technology": [
+        "Node.js",
+        "MySQL for supported production installations",
+        "Handlebars themes",
+        "HTML, CSS, and JavaScript"
+      ],
+      "capabilities": [
+        "Publishing and blogging tools",
+        "Custom themes",
+        "Membership and subscription features",
+        "Email newsletters",
+        "REST Content API and headless CMS support"
+      ],
+      "limitations": [
+        "Focused mainly on publishing rather than general-purpose websites",
+        "Smaller theme and integration selection than WordPress",
+        "Self-hosting requires server and command-line administration"
+      ],
+      "example": {
+        "name": "Ghost.org",
+        "url": "https://ghost.org/"
+      },
+      "sources": [
+        {
+          "name": "Ghost Documentation",
+          "url": "https://ghost.org/docs/"
+        },
+        {
+          "name": "Hosting Ghost",
+          "url": "https://docs.ghost.org/hosting/"
+        },
+        {
+          "name": "Ghost Content API",
+          "url": "https://ghost.org/docs/content-api/"
+        }
+      ]
+    },
+    {
+      "name": "Umbraco",
+      "support": "Open-source CMS maintained by Umbraco HQ and its community, with optional commercial cloud hosting and support.",
+      "technology": [
+        "ASP.NET Core and C#",
+        "Microsoft .NET",
+        "SQL Server or SQLite",
+        "HTML, CSS, and JavaScript"
+      ],
+      "capabilities": [
+        "Custom content types and templates",
+        "Flexible editor interface",
+        "User and media management",
+        "Packages and extensions",
+        "API and headless CMS support"
+      ],
+      "limitations": [
+        "Requires familiarity with Microsoft .NET for advanced development",
+        "Smaller package ecosystem than WordPress",
+        "Commercial cloud hosting and some services require payment"
+      ],
+      "example": {
+        "name": "Umbraco.com",
+        "url": "https://umbraco.com/"
+      },
+      "sources": [
+        {
+          "name": "Umbraco Documentation",
+          "url": "https://docs.umbraco.com/"
+        },
+        {
+          "name": "Umbraco Requirements",
+          "url": "https://docs.umbraco.com/umbraco-cms/13.latest/fundamentals/setup/requirements"
+        },
+        {
+          "name": "Umbraco Marketplace",
+          "url": "https://marketplace.umbraco.com/"
+        }
+      ]
+    }
+  ]
+}

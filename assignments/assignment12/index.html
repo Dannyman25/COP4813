@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="A comparison of five popular web content management systems."
+    >
+
+    <title>Assignment 12 - CMS Review</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="cms.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Daniel Crowder</h1>
+        <p>Information Technology Student and Support Technician</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About Me</a></li>
+            <li>
+                <a
+                    href="../../assignments.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Assignments
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="cms-review-page">
+        <section class="cms-introduction">
+            <h2>Assignment 12: Content Management System Review</h2>
+
+            <p>
+                This page compares five content management systems based on
+                their support, technology, capabilities, limitations, and
+                example websites.
+            </p>
+
+            <p>
+                The information is stored in an external JSON file. JavaScript
+                reads the JSON data and dynamically generates the table.
+            </p>
+        </section>
+
+        <section class="cms-table-section">
+            <h2 id="comparison-heading">CMS Comparison</h2>
+
+            <p id="cms-status" class="cms-status" aria-live="polite">
+                Loading content management system information...
+            </p>
+
+            <div class="cms-table-wrapper">
+                <table aria-labelledby="comparison-heading">
+                    <thead>
+                        <tr>
+                            <th scope="col">System</th>
+                            <th scope="col">Produced/Sold By</th>
+                            <th scope="col">Technology Base</th>
+                            <th scope="col">Major Capabilities</th>
+                            <th scope="col">Major Limitations</th>
+                            <th scope="col">Example Site</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="cms-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <noscript>
+            <p class="error-message">
+                JavaScript must be enabled to display the CMS comparison table.
+            </p>
+        </noscript>
+    </main>
+
+    <footer>
+        <p>Created by Daniel Crowder</p>
+    </footer>
+</body>
+</html>

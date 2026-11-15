@@ -1413,3 +1413,143 @@ footer p {
         width: 100%;
     }
 }
+
+/* Assignment 12 - CMS Review */
+
+.cms-review-page {
+    margin: 30px auto;
+    width: min(1400px, 95%);
+}
+
+.cms-introduction,
+.cms-table-section {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+    margin-bottom: 25px;
+    padding: 25px;
+}
+
+.cms-introduction h2,
+.cms-table-section h2 {
+    color: #174d78;
+    margin-top: 0;
+}
+
+.cms-status {
+    background-color: #edf6fc;
+    border-left: 5px solid #174d78;
+    margin: 15px 0;
+    padding: 12px 15px;
+}
+
+.cms-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.cms-table-wrapper table {
+    border-collapse: collapse;
+    min-width: 1050px;
+    width: 100%;
+}
+
+.cms-table-wrapper th,
+.cms-table-wrapper td {
+    border: 1px solid #aebbc5;
+    line-height: 1.5;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.cms-table-wrapper thead th {
+    background-color: #174d78;
+    color: #ffffff;
+}
+
+.cms-table-wrapper tbody th {
+    background-color: #e8f1f7;
+    color: #174d78;
+    min-width: 175px;
+}
+
+.cms-table-wrapper tbody tr:nth-child(even) td {
+    background-color: #f5f7f9;
+}
+
+.cms-table-wrapper tbody tr:hover td,
+.cms-table-wrapper tbody tr:hover th {
+    background-color: #fff8dc;
+}
+
+.cms-table-wrapper ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.cms-table-wrapper li {
+    margin-bottom: 7px;
+}
+
+.cms-table-wrapper a {
+    color: #075f9b;
+    font-weight: bold;
+}
+
+.cms-table-wrapper a:hover,
+.cms-table-wrapper a:focus {
+    color: #9a5600;
+}
+
+.cms-table-wrapper a:focus,
+.cms-table-wrapper button:focus {
+    outline: 3px solid #f5b82e;
+    outline-offset: 2px;
+}
+
+.source-list {
+    font-size: 0.88rem;
+    font-weight: normal;
+    margin-top: 8px !important;
+}
+
+.source-list li {
+    margin-bottom: 5px;
+}
+
+.source-list a {
+    font-weight: normal;
+}
+
+.cms-table-wrapper .source-list::before {
+    color: #333333;
+    content: "Research Sources";
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 7px -20px;
+}
+
+@media (max-width: 700px) {
+    .cms-review-page {
+        margin: 18px auto;
+        width: 94%;
+    }
+
+    .cms-introduction,
+    .cms-table-section {
+        padding: 18px;
+    }
+
+    .cms-table-wrapper {
+        border: 2px solid #174d78;
+    }
+
+    .cms-table-wrapper::before {
+        background-color: #fff8dc;
+        content: "Scroll horizontally to view the complete table.";
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+}
