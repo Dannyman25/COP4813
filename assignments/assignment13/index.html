@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignment 13: Context Clues Challenge</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="game.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Daniel Crowder</h1>
+        <p>Information Technology Student and Support Technician</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="../../index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="../../about.html">About Me</a>
+            </li>
+
+            <li>
+                <a href="../../assignments.html" class="active">
+                    Assignments
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="game-container">
+        <section class="game-introduction">
+            <h2>Context Clues Challenge</h2>
+
+            <p>
+                Test your vocabulary by selecting the word that best completes
+                each sentence.
+            </p>
+
+            <div class="game-instructions">
+                <h3>How to Play</h3>
+
+                <ol>
+                    <li>Read the sentence carefully.</li>
+                    <li>Select the word that best completes the sentence.</li>
+                    <li>Review the explanation after answering.</li>
+                    <li>
+                        Complete all 10 questions and try to earn the highest
+                        score.
+                    </li>
+                </ol>
+            </div>
+
+            <button id="start-button" type="button">
+                Start Game
+            </button>
+        </section>
+
+        <div id="game-area" class="game-area" hidden>
+            <div class="game-statistics">
+                <div class="stat-box">
+                    <span id="question-number">1 of 10</span>
+                    <small>Question</small>
+                </div>
+
+                <div class="stat-box">
+                    <span id="score">0</span>
+                    <small>Score</small>
+                </div>
+
+                <div class="stat-box">
+                    <span id="streak">0</span>
+                    <small>Streak</small>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <p id="sentence">
+                    Loading question...
+                </p>
+
+                <div
+                    id="answer-choices"
+                    class="answer-choices">
+                </div>
+
+                <div
+                    id="feedback"
+                    class="feedback"
+                    aria-live="polite">
+                </div>
+
+                <button id="next-button" type="button" hidden>
+                    Next Question
+                </button>
+            </div>
+        </div>
+
+        <section id="results-area" class="results-area" hidden>
+            <h2>Game Complete!</h2>
+
+            <p id="final-message"></p>
+
+            <div class="final-results">
+                <p>
+                    <strong>Final Score:</strong>
+                    <span id="final-score">0</span>/10
+                </p>
+
+                <p>
+                    <strong>Accuracy:</strong>
+                    <span id="accuracy">0%</span>
+                </p>
+
+                <p>
+                    <strong>Best Streak:</strong>
+                    <span id="best-streak">0</span>
+                </p>
+            </div>
+
+            <button id="restart-button" type="button">
+                Play Again
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Daniel Crowder</p>
+    </footer>
+</body>
+
+</html>
