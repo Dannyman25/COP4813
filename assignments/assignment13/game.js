@@ -10,6 +10,7 @@ const questionNumber = document.getElementById("question-number");
 const scoreDisplay = document.getElementById("score");
 const streakDisplay = document.getElementById("streak");
 const sentenceDisplay = document.getElementById("sentence");
+const questionImage = document.getElementById("question-image");
 const answerChoices = document.getElementById("answer-choices");
 const feedback = document.getElementById("feedback");
 
@@ -81,6 +82,8 @@ function showQuestion() {
         `${currentQuestionIndex + 1} of ${gameQuestions.length}`;
 
     sentenceDisplay.textContent = currentQuestion.sentence;
+    questionImage.src = currentQuestion.image;
+    questionImage.alt = currentQuestion.alt;
 
     const shuffledChoices = shuffleArray(currentQuestion.choices);
 

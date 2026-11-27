@@ -1,74 +1,98 @@
 [
-  {
-    "sentence": "After hiking for several hours, Marcus felt completely ___.",
-    "choices": ["exhausted", "curious", "careless"],
-    "answer": "exhausted",
-    "explanation": "Exhausted means extremely tired."
-  },
-  {
-    "sentence": "The instructions were so ___ that everyone understood them immediately.",
-    "choices": ["confusing", "clear", "ordinary"],
-    "answer": "clear",
-    "explanation": "Clear instructions are easy to understand."
-  },
-  {
-    "sentence": "Because the glass was very ___, Ava carried it carefully.",
-    "choices": ["fragile", "enormous", "smooth"],
-    "answer": "fragile",
-    "explanation": "Fragile objects can break easily."
-  },
-  {
-    "sentence": "The audience began to ___ when the performer finished the song.",
-    "choices": ["applaud", "whisper", "disappear"],
-    "answer": "applaud",
-    "explanation": "To applaud means to show approval by clapping."
-  },
-  {
-    "sentence": "Noah studied every night because he was ___ to pass the exam.",
-    "choices": ["determined", "surprised", "uncertain"],
-    "answer": "determined",
-    "explanation": "Determined means strongly committed to reaching a goal."
-  },
-  {
-    "sentence": "The abandoned house looked ___ during the thunderstorm.",
-    "choices": ["cheerful", "peaceful", "eerie"],
-    "answer": "eerie",
-    "explanation": "Eerie describes something strange or frightening."
-  },
-  {
-    "sentence": "The scientist carefully recorded the results to ensure they were ___.",
-    "choices": ["accurate", "colorful", "temporary"],
-    "answer": "accurate",
-    "explanation": "Accurate information is correct and free from errors."
-  },
-  {
-    "sentence": "Mia gave a very ___ explanation, including every important detail.",
-    "choices": ["brief", "thorough", "careless"],
-    "answer": "thorough",
-    "explanation": "Thorough means complete and detailed."
-  },
-  {
-    "sentence": "The coach encouraged the team to ___ despite being behind.",
-    "choices": ["surrender", "persevere", "complain"],
-    "answer": "persevere",
-    "explanation": "To persevere means to continue despite difficulty."
-  },
-  {
-    "sentence": "The library was so ___ that Liam could hear the clock ticking.",
-    "choices": ["quiet", "crowded", "bright"],
-    "answer": "quiet",
-    "explanation": "The ticking clock suggests that the library was quiet."
-  },
-  {
-    "sentence": "The directions were ___, causing several people to get lost.",
-    "choices": ["helpful", "unclear", "accurate"],
-    "answer": "unclear",
-    "explanation": "Unclear directions are difficult to understand or follow."
-  },
-  {
-    "sentence": "Elena was ___ to share her supplies with a classmate.",
-    "choices": ["generous", "reluctant", "impatient"],
-    "answer": "generous",
-    "explanation": "Generous means willing to give or share with others."
-  }
+    {
+        "sentence": "After hiking for several hours, Marcus felt completely ___.",
+        "choices": ["exhausted", "curious", "careless"],
+        "answer": "exhausted",
+        "explanation": "Exhausted means extremely tired.",
+        "image": "images/exhausted-hiker.png",
+        "alt": "An exhausted hiker resting on a trail"
+    },
+    {
+        "sentence": "The instructions were so ___ that everyone understood them immediately.",
+        "choices": ["confusing", "clear", "ordinary"],
+        "answer": "clear",
+        "explanation": "Clear instructions are easy to understand.",
+        "image": "images/clear-instructions.png",
+        "alt": "A person presenting clear instructions"
+    },
+    {
+        "sentence": "Because the glass was very ___, Ava carried it carefully.",
+        "choices": ["fragile", "enormous", "smooth"],
+        "answer": "fragile",
+        "explanation": "Fragile objects can break easily.",
+        "image": "images/fragile-glass.png",
+        "alt": "A fragile drinking glass being handled carefully"
+    },
+    {
+        "sentence": "The audience began to ___ when the performer finished the song.",
+        "choices": ["applaud", "whisper", "disappear"],
+        "answer": "applaud",
+        "explanation": "To applaud means to show approval by clapping.",
+        "image": "images/audience-applauding.png",
+        "alt": "An audience applauding a performance"
+    },
+    {
+        "sentence": "Noah studied every night because he was ___ to pass the exam.",
+        "choices": ["determined", "surprised", "uncertain"],
+        "answer": "determined",
+        "explanation": "Determined means strongly committed to reaching a goal.",
+        "image": "images/determined-student.png",
+        "alt": "A determined student studying for an exam"
+    },
+    {
+        "sentence": "The abandoned house looked ___ during the thunderstorm.",
+        "choices": ["cheerful", "peaceful", "eerie"],
+        "answer": "eerie",
+        "explanation": "Eerie describes something strange or frightening.",
+        "image": "images/eerie-house.png",
+        "alt": "An eerie abandoned house during a storm"
+    },
+    {
+        "sentence": "The scientist carefully recorded the results to ensure they were ___.",
+        "choices": ["accurate", "colorful", "temporary"],
+        "answer": "accurate",
+        "explanation": "Accurate information is correct and free from errors.",
+        "image": "images/accurate-scientist.png",
+        "alt": "A scientist carefully recording accurate results"
+    },
+    {
+        "sentence": "Mia gave a very ___ explanation, including every important detail.",
+        "choices": ["brief", "thorough", "careless"],
+        "answer": "thorough",
+        "explanation": "Thorough means complete and detailed.",
+        "image": "images/thorough-report.png",
+        "alt": "A detailed report representing a thorough explanation"
+    },
+    {
+        "sentence": "The coach encouraged the team to ___ despite being behind.",
+        "choices": ["surrender", "persevere", "complain"],
+        "answer": "persevere",
+        "explanation": "To persevere means to continue despite difficulty.",
+        "image": "images/team-persevering.png",
+        "alt": "A team persevering during a difficult competition"
+    },
+    {
+        "sentence": "The library was so ___ that Liam could hear the clock ticking.",
+        "choices": ["quiet", "crowded", "bright"],
+        "answer": "quiet",
+        "explanation": "The ticking clock suggests that the library was quiet.",
+        "image": "images/quiet-library.png",
+        "alt": "A quiet library with rows of books"
+    },
+    {
+        "sentence": "The directions were ___, causing several people to get lost.",
+        "choices": ["helpful", "unclear", "accurate"],
+        "answer": "unclear",
+        "explanation": "Unclear directions are difficult to understand or follow.",
+        "image": "images/unclear-directions.png",
+        "alt": "Confusing signs representing unclear directions"
+    },
+    {
+        "sentence": "Elena was ___ to share her supplies with a classmate.",
+        "choices": ["generous", "reluctant", "impatient"],
+        "answer": "generous",
+        "explanation": "Generous means willing to give or share with others.",
+        "image": "images/generous-student.png",
+        "alt": "A generous student sharing school supplies"
+    }
 ]
